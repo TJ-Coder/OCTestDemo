@@ -21,6 +21,11 @@
         NSLog(@"test success!");
     }];
     
+    [self testDemo2:^(NSString *name) {
+       
+        //do something with param
+        
+    }];
     
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -30,6 +35,16 @@
     
     NSLog(@"git test");
     !then ?:then();
+}
+
+
+-(void)testDemo2:(void(^)(NSString *name))come
+{
+    NSString *name = @"Ttang";
+
+    !come ?:come(name);
+    
+
 }
 
 
